@@ -11,7 +11,7 @@ A finalidade desse projeto é apresentar um desafio em jest, para medir a profic
 
 % 1. Escreva um arquivo de testes unitários para o arquivo "duckClassifier.js". Atenção: Não mexa no código do arquivo, ele não é foco do exercício.
 
-2. Escreva um arquivo de testes unitários para o arquivo "helper.js". Existem várias formas de realizar a verificação de valores do jest (expect), NÃO repita a mesma verificação duas vezes. Atenção: Não mexa no código do arquivo, ele não é foco do exercício.
+% 2. Escreva um arquivo de testes unitários para o arquivo "helper.js". Existem várias formas de realizar a verificação de valores do jest (expect), NÃO repita a mesma verificação duas vezes. Atenção: Não mexa no código do arquivo, ele não é foco do exercício.
 
 % 3. No arquivo "lifecycle.js", substitua os valores "X" do console.log por números, de modo que esses sejam impressos na ordem correta.
 
