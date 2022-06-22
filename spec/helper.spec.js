@@ -13,8 +13,8 @@ describe('helper', () => {
         expect(helper.randomAbove3()).toBeGreaterThan(3);
       });
 
-      it('then should not return a number less than 3', () => {
-        expect(helper.randomAbove3()).not.toBeLessThan(3);
+      it('then should not return a number less than or equal 3', () => {
+        expect(helper.randomAbove3()).not.toBeLessThanOrEqual(3);
       });
     });
 
@@ -29,21 +29,33 @@ describe('helper', () => {
     });
 
     describe('and the method returnFalse is called', () => {
-      it('then should return false', () => {
+      it('then should return falsy', () => {
         expect(helper.returnFalse()).toBeFalsy();
       });
 
-      it('then should not return false', () => {
+      it('then should return false', () => {
+        expect(helper.returnFalse()).toBe(false);
+      });
+
+      it('then should not return true', () => {
         expect(helper.returnFalse()).not.toBeTruthy();
       });
     });
 
     describe('and the method returnUndefined is called', () => {
-      it('then should return undefined', () => {
+      it('then should be undefined', () => {
         expect(helper.returnUndefined()).toBeUndefined();
       });
-    });
 
+      it('then should return undefined', () => {
+        expect(helper.returnUndefined()).toBe(undefined);
+      });
+
+      it('then should not return true', () => {
+        expect(helper.returnUndefined()).not.toBeTruthy();
+      });
+    });
+    
     describe('and the method builder is called', () => {
       it('then should return an object', () => {
         expect(helper.builder()).toEqual({
@@ -84,8 +96,9 @@ describe('helper', () => {
           expect(helper.concatRandomArray(arr)).toContain(arr[1]);
         });
 
-        it('the first value of the returned array being a random number', () => {
-          expect(helper.concatRandomArray(arr)[0]).toMatch(/\w+.*/);
+        it('the first value of the returned array being a random number greater than 0', () => {
+          let first = helper.concatRandomArray(arr)[0];
+          expect(parseInt(first)).toBeGreaterThan(0);
         });
       });
     });

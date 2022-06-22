@@ -6,7 +6,7 @@ const helper = {
     randomAbove3: () => {
         let x = 0;
         while(x <= 3) {
-            x = Math.floor(Math.random() * 10) + 1;
+            x = Math.floor(Math.random() * 10);
         }
         return x;
     },
